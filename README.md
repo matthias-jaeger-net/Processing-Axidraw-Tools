@@ -12,7 +12,7 @@ Personal collection of ideas and code to run the Axidraw in my studio from Proce
 
 ### Libraries used by examples
 * http://www.looksgood.de/libraries/Ani/
-** Animation library 
+* * Animation library 
 
 # Found out so far
 To connect to the Axidraw we need an instance of Serial
