@@ -1,9 +1,9 @@
 # Processing-Axidraw-Tools
 Personal collection of ideas and code to run the Axidraw in my studio from Processing
 
-## Talking to the Axidraw
+## Talking to the Axidraw - [Session One]
 
-### Connection
+### Finding the correct port
 To talk to the machine we need an instance of a Serial object. As pointed out by this example (https://www.processing.org/reference/libraries/serial/) we can scan for all available ports and see them listed in the console. 
 
 ```java 
@@ -14,21 +14,33 @@ import processing.serial.*;
 printArray(Serial.list());
 
 // Output 
-// [0] "The port's name"
+// [0] "Your port's name"
 // [1] "Maybe an other port"
 // [.] "...."
 ```
-#### More about the Serial object 
 
-### Finding the correct port
-, that all examples called ``myPort``. With this we are able to send commands to the plotters serial port. 
-In the examples we found a ``scanSerial();`` function, located in ``utils.pde`` and spotted the relevant lines. We manually run the function and saw in the console output the names of all available ports on our Macbook. We took note of it as a constant and called it ``portName``
-
+### Connect to the port
+After printing the ports in the console we saw which one of the listed ports actually was the plotter's port and store it globally in ``myPortName``. To connect we have to create the serial object, that all examples called ``myPort``. With this we are able to send commands to the plotters serial port. 
 ```java
-// Initial
-Serial myPort;
-Serial.list()
-myPort = new Serial(this, portName, 38400);
+String myPortName = "Your port's name";
+int    myBoudRate = 38400; // Number used in examples, looked up meaning
+Serial myPort = new Serial(this, myPortName, myBoudRate);
+```
+### Sending commands to the port
+The examples are wrapping the lines that actually send things to the port in a lot of code. We were reading the code and collecting different commands here. 
+
+#### Basic command structre
+A command to the port is sent as a single line of characters followed by a return in the form of a ``String``
+```java
+// Prints the version number of the port
+String myCommand = "v/r"; 
+myPort.write(myCommand);
+```
+
+
+#### Print the version number 
+```java
+myPort.write("v\r");
 ```
 
 
