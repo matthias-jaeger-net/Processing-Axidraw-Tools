@@ -6,13 +6,13 @@ Personal collection of ideas and code to run the Axidraw in my studio from Proce
 * https://cdn.evilmadscientist.com/dl/ad/public/AxiDraw_Guide_v40_r3.pdf
 
 ### Code to review
-https://github.com/evil-mad/AxiDraw-Processing
-https://github.com/ralphcrutzen/AxiTurtle
-https://forresto.github.io/turtle-svg/
+* https://github.com/evil-mad/AxiDraw-Processing
+* https://github.com/ralphcrutzen/AxiTurtle
+* https://forresto.github.io/turtle-svg/
 
 ### Libraries used by examples
-http://www.looksgood.de/libraries/Ani/
-
+* http://www.looksgood.de/libraries/Ani/
+** Animation library 
 
 # Found out so far
 To connect to the Axidraw we need an instance of Serial
