@@ -6,16 +6,19 @@ Personal collection of ideas and code to run the Axidraw in my studio from Proce
 * https://cdn.evilmadscientist.com/dl/ad/public/AxiDraw_Guide_v40_r3.pdf
 
 ### Code to review
-* https://github.com/evil-mad/AxiDraw-Processing
-* https://github.com/ralphcrutzen/AxiTurtle
+* Original example
+* * https://github.com/evil-mad/AxiDraw-Processing
+* Turtle Exapmle 
+* * https://github.com/ralphcrutzen/AxiTurtle
+* JS Turtle, fun to play
 * https://forresto.github.io/turtle-svg/
 
 ### Libraries used by examples
-* http://www.looksgood.de/libraries/Ani/
-* * Animation library 
+* Animation library, used for Timings I think
+* *  http://www.looksgood.de/libraries/Ani/
 
-# Found out so far
-To connect to the Axidraw we need an instance of Serial
-```java
+# What we found out so far
+To connect to the Axidraw we need an instance of a Serial object, that all examples called ``myPort``
+```java 
 import processing.serial.*;
 ```
