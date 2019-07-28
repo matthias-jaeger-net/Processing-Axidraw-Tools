@@ -27,7 +27,7 @@ int    myBoudRate = 38400; // Number used in examples, looked up meaning
 Serial myPort = new Serial(this, myPortName, myBoudRate);
 ```
 ### Sending commands to the port
-The examples are wrapping the lines that actually send things to the port in a lot of code. We were reading the code and collecting different commands here. 
+The firmware on the Axidraw runs the EBB (Egg Bot) and the commands we can send are listed on this webpage (http://evil-mad.github.io/EggBot/ebb.html). The Processing examples are wrapping the lines that actually send things to the port in a lot of code. We were reading the code and collecting different commands here. 
 
 #### Established connection - Basic command structre
 A command to the port is sent as a single line of characters followed by a return in the form of a ``String``
